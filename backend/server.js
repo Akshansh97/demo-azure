@@ -7,6 +7,7 @@ app.use(express.json());
 app.use(cors());
 app.use(express.static("../frontend/dist"))
 
+
 app.get("*", () => {
     res.sendFile(path.resolve(__dirname, "frontend", "dist", "index.html"))
 }
