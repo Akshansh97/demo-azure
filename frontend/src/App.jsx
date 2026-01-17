@@ -10,7 +10,7 @@ const App = () => {
   const fetchData = async () => {
     try {
       const response = await axios.get(
-        "http://akshanshdemo-fkd8f7ffa2eae4bw.southindia-01.azurewebsites.net",
+        "http://akshanshdemo2-ajdgcfbrhhbzb0aq.southindia-01.azurewebsites.net",
       );
       setResult(response.data);
       console.log(response);
