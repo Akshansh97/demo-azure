@@ -7,10 +7,9 @@ app.use(express.json());
 app.use(cors());
 app.use(express.static("../frontend/dist"))
 
-app.get("*", () => {
-    res.sendFile(path.resolve(__dirname, "frontend", "dist", "index.html"))
-}
-)
+app.use(
+  express.static(path.join(__dirname, "../frontend/dist/index.html"))
+);
 app.listen(5000, () => {
     console.log('Server is running on port 5000');
 });
